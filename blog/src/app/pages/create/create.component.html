@@ -1,0 +1,14 @@
+<div class="post-header">
+  <input class="post-title" #title placeholder="Título da Postagem"/>
+  <button class="post-button" (click)="createPost()">Publicar</button>
+</div>
+
+<div class="create-content">
+
+  <textarea
+    #bodyCreator
+    class="post-content"
+  ></textarea>
+
+  <div [innerHTML]="bodyOutput"></div>
+</div>

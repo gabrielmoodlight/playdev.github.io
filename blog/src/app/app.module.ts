@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirebaseService } from './services/firebase.service';
+import { RouterModule } from '@angular/router';
+import { PostsModule } from './pages/posts/posts.module';
 
 @NgModule({
   declarations: [
@@ -11,6 +13,8 @@ import { FirebaseService } from './services/firebase.service';
   ],
   imports: [
     BrowserModule,
+    RouterModule,
+    PostsModule,
     AppRoutingModule
   ],
   providers: [

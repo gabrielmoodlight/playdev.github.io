@@ -1,0 +1,16 @@
+<h1>
+  Publicações
+</h1>
+
+<form class="search">
+  <input type="text" name="term" placeholder="search term">
+  <button type="submit">Procurar</button>
+</form>
+
+<ul class="posts">
+  <li class="post" *ngFor="let post of posts">
+    <h2>{{ post.title }}</h2>
+    <div>{{ post.body.replace('#', '').replace('*', '').slice(0, 200) }}</div>
+    <a (click)="readMore(post.key)">Leia mais...</a>
+  </li>
+</ul>
