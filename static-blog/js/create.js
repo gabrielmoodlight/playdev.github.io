@@ -8,8 +8,6 @@ const output = document.querySelector('.post-output');
 const createPost = async (e) => {
     e.preventDefault();
 
-    console.log('title', title);
-
     const doc = {
         title: title.value,
         body: textarea.value
@@ -22,6 +20,14 @@ const createPost = async (e) => {
     });
     window.location.replace('/index.html');
 }
+
+function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  }
 
 textarea.addEventListener('keyup', (e) => {
     output.innerHTML = marked.parse(textarea.value);

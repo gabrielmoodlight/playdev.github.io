@@ -87,3 +87,20 @@ textarea {
   align-items: center;
   flex-direction: column;
 }
+
+.post-button {
+  font-size: 18px;
+  font-family: 'Roboto';
+  color: white;
+  background-color: rgb(17, 170, 17);
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.3s all;
+  text-decoration: none;
+}
+
+.post-button:hover {
+  box-shadow: 2.5px 2.5px 5px 1px rgba(0, 0, 0, 0.25);
+}

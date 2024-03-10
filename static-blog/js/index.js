@@ -1,6 +1,6 @@
 // javascript for index.html
 
-const container = document.querySelector('.blogs');
+const container = document.querySelector('.posts');
 const searchForm = document.querySelector('.search');
 
 const renderPosts = async (term) => {
@@ -19,7 +19,7 @@ const renderPosts = async (term) => {
             template += `
                 <div class="post">
                     <h2>${post.title}</h2>
-                    <p>${marked.parse(post.body.slice(0, 200))}</p>
+                    <div>${marked.parse(post.body.replace('#', '').replace('*', '').slice(0, 200))}</div>
                     <a href="/details.html?id=${ post.id }">Leia mais...</a>
                 </div>
             `

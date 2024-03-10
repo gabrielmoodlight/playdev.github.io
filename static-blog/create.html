@@ -2,10 +2,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
   <link rel="stylesheet" href="css/create.css">
   <title>JSON Server</title>
 </head>
 <body>
+  <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
 
   <div class="post-header">
     <input class="post-title" placeholder="Título da Postagem"/>
@@ -20,6 +22,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="js/create.js"></script>
 </body>
 </html>

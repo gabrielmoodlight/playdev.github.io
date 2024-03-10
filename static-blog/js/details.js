@@ -10,7 +10,7 @@ const renderDetails = async () => {
     
     const template = `
         <h1>${post.title}</h1>
-        <p>${post.body}</p>
+        <div>${marked.parse(post.body)}</div>
         `
     container.innerHTML = template;
 }
